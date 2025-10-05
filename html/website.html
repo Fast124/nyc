@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- SEO Optimization: PRIMARY TARGET - New York Plumber -->
+    <title>🥇 Top-Rated NYC Plumber | 24/7 Emergency Service, Drain Cleaning & Water Heaters in New York</title>
+    <!-- Critical: Dense, location-specific description with high-value keywords -->
+    <meta name="description" content="NYC Quality Plumbing is the highest-rated 24/7 emergency plumber serving New York, NY, Manhattan, Brooklyn, and Queens. We specialize in fast drain cleaning, water heater installation, and certified gas line repair. Licensed NYC plumbing experts ready to help now!">
+    <meta name="keywords" content="New York plumber, NYC plumber, emergency plumber NYC, 24 hour plumber Manhattan, drain cleaning Brooklyn, water heater repair Queens, licensed New York plumber, commercial plumbing NYC">
+    <meta name="author" content="NYC Quality Plumbing">
+    
+    <!-- Professional Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS variables for color control and contrast */
+        :root {
+            --primary-blue: #0A66C2; /* Professional Blue */
+            --primary-dark-bg: #1A202C; /* Deep Dark Background */
+            --emergency-red: #D61A3C; /* High-contrast Emergency Red */
+            --emergency-red-dark: #A3142D; /* Darker red for light mode hover */
+            --dark-theme-text: #E5E7EB;
+            --dark-theme-surface: #0F172A;
+            --dark-theme-card: #1E293B;
+            --light-theme-surface: #f8f9fa;
+            --light-theme-card: white;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Theme Classes for background and text based on the selected mode */
+        .light .bg-surface { background-color: var(--light-theme-surface); }
+        .light .bg-card { background-color: var(--light-theme-card); }
+        .light .text-content { color: #1f2937; }
+        .light .border-card { border-color: #e5e7eb; }
+        .light .bg-primary-dark { background-color: var(--primary-blue); }
+
+        .dark .bg-surface { background-color: var(--dark-theme-surface); }
+        .dark .bg-card { background-color: var(--dark-theme-card); }
+        .dark .text-content { color: var(--dark-theme-text); }
+        .dark .border-card { border-color: #334155; }
+        .dark .bg-primary-dark { background-color: #1a202c; }
+
+        /* Fixed CTA Button (Ensures visibility in both modes) */
+        .bg-emergency-cta { background-color: var(--emergency-red); }
+        .bg-emergency-cta:hover { background-color: var(--emergency-red-dark); }
+        .text-primary-color { color: var(--primary-blue); }
+
+        /* Ensure smooth scrolling for navigation */
+        html { scroll-behavior: smooth; }
+        
+        /* Transition for FAQ content */
+        .faq-content {
+            transition: max-height 0.5s ease-in-out;
+            max-height: 0;
+            overflow: hidden; /* Ensure content stays hidden */
+        }
+        /* Style for the FAQ toggle icon */
+        .faq-toggle span {
+            transition: transform 0.3s ease;
+        }
+        
+    </style>
+
+    <!-- JSON-LD Schema for Local Business SEO (CRITICAL for local ranking) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "NYC Quality Plumbing - Emergency New York Plumber",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "885 6th Ave",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "url": "https://www.nycqualityplumbing.com",
+      "telephone": "+13322220135",
+      "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su 00:00-24:00",
+      "priceRange": "$$",
+      "serviceType": ["New York Plumber", "Emergency Plumbing Service", "Drain Cleaning NYC", "Water Heater Repair", "Gas Line Repair Manhattan"]
+    }
+    </script>
+</head>
+<body class="bg-surface text-content">
+
+    <!-- Navbar & Header -->
+    <header class="bg-primary-dark shadow-xl sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-white text-2xl sm:text-3xl font-black tracking-tight p-1 hover:opacity-90">
+                NYC Quality Plumbing
+            </a>
+
+            <!-- Desktop Navigation Links (Hidden on Mobile) -->
+            <nav class="hidden lg:flex space-x-6 text-white text-lg font-medium">
+                <a href="#about" class="hover:text-amber-300 transition-colors">About</a>
+                <a href="#services" class="hover:text-amber-300 transition-colors">Services</a>
+                <a href="#areas" class="hover:text-amber-300 transition-colors">Service Areas</a>
+                <a href="#reviews" class="hover:text-amber-300 transition-colors">Trust</a>
+                <a href="#blog" class="hover:text-amber-300 transition-colors">Blog</a>
+                <a href="#location" class="hover:text-amber-300 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Emergency Contact & Theme Switch (Desktop View) -->
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="text-right">
+                    <p class="text-xs text-white opacity-75 uppercase tracking-wider">24/7 Emergency Plumber</p>
+                    <a href="tel:+13322220135" class="text-white text-2xl font-extrabold hover:text-amber-300 transition-colors">
+                        +1 (332) 222-0135
+                    </a>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-3 bg-white/10 text-white rounded-full hover:bg-white/20 transition-all focus:outline-none">
+                    <!-- Icon SVGs hidden/shown via JS -->
+                    <svg id="theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-dark" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+            
+            <!-- Mobile CTA Button & Theme Switch (Visible on Mobile/Tablet) -->
+            <div class="md:hidden flex items-center space-x-3">
+                <button id="mobile-theme-toggle" class="p-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all focus:outline-none">
+                    <!-- Icon SVGs hidden/shown via JS -->
+                    <svg id="mobile-theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="mobile-theme-icon-dark" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <!-- Mobile CTA Button: Clear and prominent -->
+                <a href="tel:+13322220135" class="bg-emergency-cta text-white py-2 px-3 rounded-lg font-bold hover:opacity-90 transition-opacity whitespace-nowrap text-base">
+                    CALL 24/7
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: High-converting CTA -->
+        <section class="bg-surface py-16 md:py-32 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- H1: Critically important for primary keyword -->
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-content mb-6 leading-tight">
+                    <span class="text-primary-color">The #1 Licensed Plumber</span> <br class="hidden sm:block"> for 24/7 Emergency Service in <span class="text-emergency-cta">New York City</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-content opacity-80 max-w-4xl mx-auto mb-10">
+                    Need a **plumber in New York** now? We guarantee rapid dispatch and expert repair for drain clogs, burst pipes, and water heater failures across Manhattan, Brooklyn, and Queens.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <!-- Primary Call to Action -->
+                    <a href="tel:+13322220135" class="inline-block px-8 py-3 text-lg sm:text-xl font-bold rounded-full bg-emergency-cta text-white shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all transform duration-300">
+                        CALL OUR 24/7 EMERGENCY PLUMBER
+                    </a>
+                    <!-- Secondary Call to Action -->
+                    <a href="#services" class="inline-block px-8 py-3 text-lg sm:text-xl font-semibold rounded-full border-2 border-primary-color text-primary-color hover:bg-primary-color hover:text-white transition-colors duration-300">
+                        View Complete Service List
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Signals/Features Section -->
+        <section class="bg-surface py-12 transition-colors duration-300 shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Default to 1 column, switch to 3 on medium screens and up -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <svg class="w-10 h-10 mx-auto text-primary-color mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h3 class="text-xl font-semibold text-content mb-1">24/7 NYC Service</h3>
+                        <p class="text-content opacity-70">Day or night, our dispatch is ready to send help immediately.</p>
+                    </div>
+                    <div class="p-4">
+                         <svg class="w-10 h-10 mx-auto text-primary-color mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+                        <h3 class="text-xl font-semibold text-content mb-1">Local & Licensed</h3>
+                        <p class="text-content opacity-70">Fully licensed **NYC plumbers** compliant with all city codes.</p>
+                    </div>
+                    <div class="p-4">
+                         <svg class="w-10 h-10 mx-auto text-primary-color mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        <h3 class="text-xl font-semibold text-content mb-1">Rapid Dispatch</h3>
+                        <p class="text-content opacity-70">Quick arrival times for emergencies across the Manhattan area.</p>
+                    </div>
+                    <div class="p-4">
+                        <svg class="w-10 h-10 mx-auto text-primary-color mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047 12.007 12.007 0 00-2.618 6.09A12.006 12.006 0 0012 21h12c0-6.627-5.373-12-12-12z" /></svg>
+                        <h3 class="text-xl font-semibold text-content mb-1">Guaranteed Work</h3>
+                        <p class="text-content opacity-70">We stand behind every repair and installation we perform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- New Section: About Us (SEO Content Block) -->
+        <section id="about" class="py-20 bg-card border-t border-b border-card">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-content">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-primary-color mb-4">Your Trusted, Licensed New York Plumber</h2>
+                        <p class="text-lg mb-6 opacity-90">
+                            Since 2005, NYC Quality Plumbing has provided reliable, high-quality plumbing services tailored specifically for the unique infrastructure challenges of New York City. We understand the specific codes, historic pipework, and high-rise complexity that other firms overlook.
+                        </p>
+                        <ul class="space-y-3 text-base opacity-80 list-disc list-inside">
+                            <li>**NYC Licensed and Insured:** Full compliance and protection for your property.</li>
+                            <li>**Specialists in High-Rise & Commercial Systems:** Expertise in complex, pressurized environments common in Manhattan.</li>
+                            <li>**20+ Years Serving the Five Boroughs:** Deep local knowledge guarantees faster troubleshooting.</li>
+                            <li>**Commitment to Non-Invasive Technology:** We use camera inspection and acoustic detection to protect your walls and floors.</li>
+                        </ul>
+                        <a href="#location" class="mt-6 inline-block px-6 py-3 text-lg font-semibold rounded-lg bg-primary-color text-white hover:bg-opacity-90 transition-colors">
+                            Request a Quote Today
+                        </a>
+                    </div>
+                     <!-- Placeholder Image/Icon representing NYC cityscape and quality work -->
+                    <div class="hidden lg:block">
+                        <svg class="w-full h-80 text-primary-color opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20v-8M6 20v-4M18 20v-4M4 20h16M7 16V8M17 16V8M9 12V4M15 12V4M12 2L12 4M12 8L12 10M12 14L12 16M12 18L12 20M4 21H20" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Our Premium Plumbing Services in NYC</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-3xl mx-auto mb-12">Reliable solutions for residential and commercial properties throughout New York City. **We solve plumbing problems fast.**</p>
+                
+                <!-- Grid defaults to 1 column, moves to 2 on medium, 3 on large -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service Card 1: Drain Cleaning (High SEO Priority) -->
+                    <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10 16L12 18L14 16" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V18" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">24/7 Drain Cleaning & Sewer Line Service</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">We quickly clear sink clogs, main line blockages, and offer professional hydro-jetting to restore flow and prevent backups in your NYC home or business.</p>
+                    </div>
+                    
+                    <!-- Service Card 2: Water Heaters (High SEO Priority) -->
+                    <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2L12 6M12 18L12 22M2 12L6 12M18 12L22 12M4.92999 4.92999L7.75999 7.75999M16.24 16.24L19.07 19.07M4.92999 19.07L7.75999 16.24M16.24 7.75999L19.07 4.92999M12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">Water Heater Repair & Installation NYC</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">Expert service for gas, electric, and tankless units. Fast repairs when you lose hot water, and energy-efficient new installations.</p>
+                    </div>
+                    
+                    <!-- Service Card 3: Leak Repair (Emergency Focus) -->
+                    <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4M12 17h.01" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">Emergency Leak Detection & Burst Pipe Repair</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">We use non-invasive technology to pinpoint and repair leaks in walls, ceilings, and slabs, protecting your New York property from serious water damage.</p>
+                    </div>
+
+                    <!-- Service Card 4: Fixture Installation -->
+                    <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 21V3M14 21V3M12 3C10 3 8 5 8 7C8 9 10 11 12 11C14 11 16 9 16 7C16 5 14 3 12 3ZM12 13C10 13 8 15 8 17C8 19 10 21 12 21C14 21 16 19 16 17C16 15 14 13 12 13Z" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">Fixture Installation & Remodeling Support</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">Installation of all faucets, toilets, sinks, shower systems, and full plumbing support for kitchen and bathroom renovations across NYC.</p>
+                    </div>
+
+                     <!-- Service Card 5: Gas Line Service (High Risk/High Value) -->
+                     <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10c0-1.848 0-3.518-2-5.75C9.429 2.5 8 4 8 6C8 7.848 8 9.518 10 11.75C11.667 13.5 14 15 14 15V19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19V15C10 15 12.3333 13.5 14 11.75Z" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">Certified Gas Line Repair & Installation</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">Licensed to handle complex gas line work, including new installations, mandatory inspections, and safe leak repairs. NYC-certified experts.</p>
+                    </div>
+
+                     <!-- Service Card 6: Commercial Plumbing -->
+                     <div class="bg-card rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-card">
+                        <svg class="w-10 h-10 text-primary-color mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 21H22V10L12 2L2 10V21Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M7 17V11" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 17V11" /><path stroke-linecap="round" stroke-linejoin="round" d="M17 17V11" /></svg>
+                        <h3 class="text-xl sm:text-2xl font-bold text-content mb-3">Commercial & Residential Plumbing</h3>
+                        <p class="text-content opacity-80 text-sm sm:text-base">Specialized service for high-volume commercial needs and responsive maintenance contracts for residential landlords and property managers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Service Areas (CRITICAL SEO TARGET) -->
+        <section id="areas" class="py-20 bg-surface transition-colors duration-300 shadow-inner border-t border-b border-card">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Our Primary Service Areas: We Are Your Local Plumber</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-4xl mx-auto mb-12">We provide rapid, reliable **plumbing services in New York** and all surrounding key boroughs. When you search for "plumber near me," we are here.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-content">
+                    
+                    <div class="bg-card p-6 rounded-xl shadow-lg border border-card">
+                        <h3 class="text-2xl font-bold text-primary-color mb-3">Manhattan Plumbing Experts</h3>
+                        <p class="text-sm opacity-80">Serving all neighborhoods, from the Financial District to Harlem. Specializing in high-rise, brownstone, and luxury apartment plumbing. **Emergency plumber Manhattan** service is our specialty.</p>
+                        <ul class="mt-3 text-xs opacity-70 list-disc list-inside">
+                            <li>Midtown, Chelsea, Upper West Side, Upper East Side.</li>
+                            <li>Sewer cleaning and boiler maintenance in NYC.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-card p-6 rounded-xl shadow-lg border border-card">
+                        <h3 class="text-2xl font-bold text-primary-color mb-3">Licensed Plumbers in Brooklyn</h3>
+                        <p class="text-sm opacity-80">Trusted service for all Brooklyn residents and businesses. We handle everything from historic home pipe replacements to commercial kitchen plumbing in Williamsburg and Downtown Brooklyn.</p>
+                        <ul class="mt-3 text-xs opacity-70 list-disc list-inside">
+                            <li>Williamsburg, Park Slope, Downtown Brooklyn, Bushwick.</li>
+                            <li>Water heater installation and repairs throughout Brooklyn.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-card p-6 rounded-xl shadow-lg border border-card">
+                        <h3 class="text-2xl font-bold text-primary-color mb-3">Queens Plumbing Services</h3>
+                        <p class="text-sm opacity-80">Fast and affordable services throughout Queens neighborhoods. We provide expert drain cleaning and gas line services for both residential and industrial areas near Flushing and Long Island City (LIC).</p>
+                        <ul class="mt-3 text-xs opacity-70 list-disc list-inside">
+                            <li>Long Island City, Astoria, Flushing, Jamaica.</li>
+                            <li>Septic tank service and large-scale commercial repairs.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Reviews Section (More Added) -->
+        <section id="reviews" class="py-20 bg-card transition-colors duration-300 border-t border-b border-card">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Client Trust: 5-Star Reviews for Our New York Plumbers</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-3xl mx-auto mb-12">Our reputation is built on reliability. Hear why we are the top-rated **NYC plumber**.</p>
+                
+                <!-- Grid defaults to 1 column, moves to 2 on medium, 3 on large -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"The professionalism of NYC Quality Plumbing is unmatched. They handled a complex commercial water heater repair flawlessly and minimized downtime for my building in Midtown Manhattan."</p>
+                        <p class="font-semibold text-sm text-content">— David L., Commercial Property Manager, Manhattan</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"I called at 3 AM for a major basement flood in Park Slope, Brooklyn. The technician arrived incredibly fast and stopped the leak within minutes. Truly lifesavers!"</p>
+                        <p class="font-semibold text-sm text-content">— Sarah M., Resident, Brooklyn</p>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"They were meticulous with the drain camera inspection and finally found the root cause of our recurring sewer issue. Clean, efficient, and highly knowledgeable."</p>
+                        <p class="font-semibold text-sm text-content">— Robert G., Restaurant Owner, Chelsea</p>
+                    </div>
+                    <!-- Review 4 (New) -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"Our hot water heater failed right before Thanksgiving. They sent an emergency plumber to our Queens location and had it replaced by midday. Unbelievable service!"</p>
+                        <p class="font-semibold text-sm text-content">— Jessica R., Homeowner, Astoria, Queens</p>
+                    </div>
+                    <!-- Review 5 (New) -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"Needed a new gas line run for a kitchen renovation in the East Village. The NYC certified plumber handled all the permitting and installation perfectly. Highly recommend this team."</p>
+                        <p class="font-semibold text-sm text-content">— Anthony V., Developer, Manhattan</p>
+                    </div>
+                    <!-- Review 6 (New) -->
+                    <div class="bg-surface p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary-color">
+                        <div class="text-amber-500 mb-2 text-2xl">★★★★★</div>
+                        <p class="text-content italic mb-4 text-base">"Used their hydro-jetting service for a severely backed-up main sewer line in our large apartment complex. Flow is perfect now. Best drain cleaning service we've ever used."</p>
+                        <p class="font-semibold text-sm text-content">— Lin B., Building Manager, Long Island City</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Common Plumbing Questions Answered</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-3xl mx-auto mb-12">Learn more about our methods, guarantees, and service commitment in New York.</p>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-card p-5 rounded-xl shadow-md border border-card transition-colors duration-300">
+                        <button class="faq-toggle w-full text-left flex justify-between items-center text-lg font-bold text-primary-color focus:outline-none" aria-expanded="false">
+                            How quickly can you respond to an emergency plumbing call?
+                            <span class="transform transition-transform duration-300 text-2xl">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="pt-4 border-t border-card text-content opacity-80 text-base">We maintain 24/7 dispatch capabilities, aiming for the fastest possible response time across Manhattan, usually within the hour for critical emergencies like burst pipes or severe overflows.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-card p-5 rounded-xl shadow-md border border-card transition-colors duration-300">
+                        <button class="faq-toggle w-full text-left flex justify-between items-center text-lg font-bold text-primary-color focus:outline-none" aria-expanded="false">
+                            Are your plumbers licensed to work on NYC gas lines?
+                            <span class="transform transition-transform duration-300 text-2xl">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="pt-4 border-t border-card text-content opacity-80 text-base">Yes. All of our technicians working on gas lines hold the necessary NYC certifications and licenses to perform safe, compliant installation, repair, and testing according to all local regulations.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-card p-5 rounded-xl shadow-md border border-card transition-colors duration-300">
+                        <button class="faq-toggle w-full text-left flex justify-between items-center text-lg font-bold text-primary-color focus:outline-none" aria-expanded="false">
+                            What warranty do you offer on water heater installations?
+                            <span class="transform transition-transform duration-300 text-2xl">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="pt-4 border-t border-card text-content opacity-80 text-base">We offer a standard one-year labor warranty on all new water heater installations, in addition to the manufacturer's warranty on the unit itself. We ensure reliable, long-term hot water for your property.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-card p-5 rounded-xl shadow-md border border-card transition-colors duration-300">
+                        <button class="faq-toggle w-full text-left flex justify-between items-center text-lg font-bold text-primary-color focus:outline-none" aria-expanded="false">
+                            Do you service commercial plumbing systems?
+                            <span class="transform transition-transform duration-300 text-2xl">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="pt-4 border-t border-card text-content opacity-80 text-base">Yes, we specialize in scheduled preventive maintenance for commercial properties, including restaurants, apartment buildings, and offices, ensuring your high-volume systems operate efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section (Preview/Placeholder) -->
+        <section id="blog" class="py-20 bg-surface transition-colors duration-300 shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Latest Plumbing Insights & Blog</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-3xl mx-auto mb-12">Expert advice and maintenance tips from your trusted NYC plumbers.</p>
+                
+                <!-- Grid defaults to 1 column, moves to 3 on medium screens and up -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-card rounded-xl shadow-lg border border-card overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <p class="text-sm font-medium text-primary-color mb-1">Drain Care</p>
+                            <h3 class="text-xl font-bold text-content mb-3">5 Ways to Prevent Costly Sewer Backups in Winter</h3>
+                            <p class="text-content opacity-70 text-sm">Understand how temperature drops affect your pipes and learn proactive steps to avoid a winter emergency in your New York property.</p>
+                            <a href="#" class="mt-4 inline-block text-primary-color text-sm font-semibold hover:underline">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-card rounded-xl shadow-lg border border-card overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                         <div class="p-6">
+                            <p class="text-sm font-medium text-primary-color mb-1">Appliance Care</p>
+                            <h3 class="text-xl font-bold text-content mb-3">Tank vs. Tankless: Choosing the Right Water Heater for Your Apartment</h3>
+                            <p class="text-content opacity-70 text-sm">A comprehensive comparison to help New Yorkers maximize space and energy efficiency with their hot water system.</p>
+                            <a href="#" class="mt-4 inline-block text-primary-color text-sm font-semibold hover:underline">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="bg-card rounded-xl shadow-lg border border-card overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                         <div class="p-6">
+                            <p class="text-sm font-medium text-primary-color mb-1">Local Focus</p>
+                            <h3 class="text-xl font-bold text-content mb-3">The Importance of Licensed Plumbers in NYC Buildings</h3>
+                            <p class="text-content opacity-70 text-sm">Why city licensing matters for compliance, safety, and insurance coverage in New York City's unique infrastructure.</p>
+                            <a href="#" class="mt-4 inline-block text-primary-color text-sm font-semibold hover:underline">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Location and Map Section -->
+        <section id="location" class="py-20 bg-card transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-content mb-4">Visit Us or Get in Touch with a New York Plumber</h2>
+                <p class="text-lg sm:text-xl text-center text-content opacity-70 max-w-3xl mx-auto mb-12">Our administrative office is centrally located in Manhattan. We service all five boroughs for all emergency and scheduled plumbing needs.</p>
+                
+                <!-- Grid defaults to 1 column, moves to 2 on large screens -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- Contact Details Card -->
+                    <div class="p-8 rounded-xl shadow-xl flex flex-col justify-center order-2 lg:order-1 bg-surface border border-card">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-content mb-6">Office & Emergency Contact</h3>
+                        
+                        <div class="space-y-5 text-base sm:text-lg">
+                            <p class="flex items-center">
+                                <span class="text-primary-color mr-4">📍</span> 
+                                <span class="font-medium">Located In:</span> <span class="ml-2 font-semibold">The Continental NYC</span>
+                            </p>
+                            <p class="flex items-start">
+                                <span class="text-primary-color mr-4 mt-1">🗺️</span> 
+                                <span class="font-medium">Address:</span> <span class="ml-2 font-semibold">885 6th Ave, New York, NY 10001, United States</span>
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-primary-color mr-4">🕒</span> 
+                                <span class="font-medium">Hours:</span> <span class="text-emergency font-extrabold ml-2">Open 24 Hours, 7 Days a Week</span>
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-primary-color mr-4">📞</span> 
+                                <span class="font-medium">Emergency Line:</span> 
+                                <a href="tel:+13322220135" class="ml-2 text-primary-color hover:underline font-extrabold text-xl sm:text-2xl">+1 (332) 222-0135</a>
+                            </p>
+                        </div>
+                        <a href="tel:+13322220135" class="mt-10 px-8 py-4 text-xl font-bold rounded-lg bg-emergency-cta text-white shadow-lg w-full text-center transition-colors">
+                            Click to Call Our 24-Hour Dispatch
+                        </a>
+                    </div>
+                    
+                    <!-- Map Embed (Responsive) -->
+                    <div class="rounded-xl shadow-2xl overflow-hidden aspect-video order-1 lg:order-2">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0;" 
+                            title="Location of NYC Quality Plumbing at 885 6th Ave, New York, NY 10001"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.257361732049!2d-73.9905953!3d40.7486895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259837f42651b%3A0x247e923e3518e178!2sThe%20Continental%20NYC%2C%20885%206th%20Ave%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1678881600000!5m2!1sen!2sus" 
+                            allowfullscreen="" 
+                            aria-hidden="false" 
+                            tabindex="0">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating Services Button (Hidden on Mobile Screens) -->
+    <a href="#services" class="fixed right-0 top-1/2 transform -translate-y-1/2 -rotate-90 origin-right px-4 py-2 bg-primary-color text-white font-semibold shadow-xl rounded-t-lg z-40 hover:bg-opacity-90 transition-colors duration-300 hidden md:block">
+        SERVICES
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white py-12 mt-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            
+            <!-- Company Info (Stacks on Mobile) -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 border-b border-white/20 pb-2">NYC Quality Plumbing</h3>
+                <p class="text-sm opacity-75 mb-4">
+                    The leading licensed **New York plumber** for 24/7 emergency service. We specialize in fast, guaranteed repairs across Manhattan, Brooklyn, and Queens.
+                </p>
+                <p class="text-sm opacity-75">
+                    Address: 885 6th Ave, NY, NY 10001
+                </p>
+            </div>
+
+            <!-- Quick Links (Stacks on Mobile) -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 border-b border-white/20 pb-2">Quick Navigation</h3>
+                <ul class="space-y-2 text-sm opacity-90">
+                    <li><a href="#about" class="hover:text-amber-300 transition-colors">About Our NYC Plumbers</a></li>
+                    <li><a href="#services" class="hover:text-amber-300 transition-colors">Emergency Services</a></li>
+                    <li><a href="#areas" class="hover:text-amber-300 transition-colors">Borough Service Areas</a></li>
+                    <li><a href="#reviews" class="hover:text-amber-300 transition-colors">Client Testimonials</a></li>
+                </ul>
+            </div>
+
+            <!-- Blog Categories (Stacks on Mobile) -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 border-b border-white/20 pb-2">Plumbing Insights</h3>
+                <ul class="space-y-2 text-sm opacity-90">
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Water Heater Guides</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Drain Maintenance Tips</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Leak Prevention</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Commercial Systems</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 border-b border-white/20 pb-2">24/7 Contact</h3>
+                <p class="text-sm opacity-90 mb-6">
+                    <span class="font-semibold">Need a Plumber Now? Call:</span> <a href="tel:+13322220135" class="hover:text-amber-300 font-bold block text-lg">+1 (332) 222-0135</a>
+                </p>
+            </div>
+
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-t border-white/10 pt-8 mt-8">
+            <p class="text-sm opacity-60">&copy; 2024 NYC Quality Plumbing. All rights reserved. Your top-rated **New York Plumber**.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle and FAQ Accordions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement;
+            const toggleButton = document.getElementById('theme-toggle');
+            const mobileToggleButton = document.getElementById('mobile-theme-toggle');
+            
+            // --- Theme Toggle Logic ---
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    htmlElement.classList.remove('light');
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    updateIcon(true);
+                } else {
+                    htmlElement.classList.remove('dark');
+                    htmlElement.classList.add('light');
+                    localStorage.setItem('theme', 'light');
+                    updateIcon(false);
+                }
+            };
+
+            const updateIcon = (isDark) => {
+                const iconsLight = [document.getElementById('theme-icon-light'), document.getElementById('mobile-theme-icon-light')];
+                const iconsDark = [document.getElementById('theme-icon-dark'), document.getElementById('mobile-theme-icon-dark')];
+
+                iconsLight.forEach(el => el && (!isDark ? el.classList.remove('hidden') : el.classList.add('hidden')));
+                iconsDark.forEach(el => el && (!isDark ? el.classList.add('hidden') : el.classList.remove('hidden')));
+            };
+
+            // Load saved theme or prefer system theme on initial load
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme) {
+                setTheme(savedTheme === 'dark');
+            } else {
+                setTheme(prefersDark);
+            }
+
+            const toggleTheme = () => {
+                const isDark = htmlElement.classList.contains('dark');
+                setTheme(!isDark);
+            };
+
+            if (toggleButton) {
+                toggleButton.addEventListener('click', toggleTheme);
+            }
+            if (mobileToggleButton) {
+                mobileToggleButton.addEventListener('click', toggleTheme);
+            }
+
+            // --- FAQ Accordion Logic ---
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+
+            faqToggles.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('span');
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other open items
+                    faqToggles.forEach(otherButton => {
+                        if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+                            const otherContent = otherButton.nextElementSibling;
+                            const otherIcon = otherButton.querySelector('span');
+
+                            // Collapse content
+                            otherContent.style.maxHeight = '0'; 
+                            otherButton.setAttribute('aria-expanded', 'false');
+                            otherIcon.style.transform = 'rotate(0deg)';
+                            otherContent.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isExpanded) {
+                        content.style.maxHeight = '0';
+                        button.setAttribute('aria-expanded', 'false');
+                        icon.style.transform = 'rotate(0deg)';
+                        content.classList.remove('open');
+                    } else {
+                        // Expand content
+                        content.style.maxHeight = content.scrollHeight + 'px'; 
+                        button.setAttribute('aria-expanded', 'true');
+                        icon.style.transform = 'rotate(45deg)'; // Change + to x visually
+                        content.classList.add('open');
+                    }
+                });
+            });
+            
+            // Ensure max height is calculated correctly for open items on resize/theme change
+             window.addEventListener('resize', () => {
+                document.querySelectorAll('.faq-content.open').forEach(content => {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
